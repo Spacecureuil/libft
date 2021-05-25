@@ -22,9 +22,18 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	i = 0;
 	res = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (src[i] != '\0')
 		i++;
-	return (i + ft_strlcpy(dest + i, src, size - i));
+	while (j < size && dest[j])
+		j++;
+	if (i < size - j)
+		ft_memcpy(dest + j, src, i + 1);
+	else
+	{
+		ft_memcpy(dest + j, src, size - j - 1);
+		dest[size - 1] = 0;
+	}
+	return (i + j);
 	// while (src[res] != '\0')
 	// 	res++;
 	// if (size <= i)
