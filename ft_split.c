@@ -77,7 +77,7 @@ static int	get_word(char *str, char charset, char ***tab, int j)
 	return (i);
 }
 
-char		**ft_split(char const *str, char charset)
+char	**ft_split(char const *str, char charset)
 {
 	int		i;
 	int		j;
@@ -85,11 +85,11 @@ char		**ft_split(char const *str, char charset)
 
 	i = 0;
 	j = 0;
-	tab = malloc((count_words((char*)str, charset) + 1) * sizeof(char *));
+	tab = malloc((count_words((char *)str, charset) + 1) * sizeof(char *));
 	while (tab && str[i])
 	{
 		if (str[i] && str[i] != charset)
-			i += get_word((char*)&str[i], charset, &tab, j++);
+			i += get_word((char *)&str[i], charset, &tab, j++);
 		else
 			i++;
 	}
