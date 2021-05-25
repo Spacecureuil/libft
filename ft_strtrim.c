@@ -27,19 +27,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	char	*str;
 
 	i = 0;
 	while (s1[i] && is_in_set(s1[i], set))
 		i++;
-	j = 0;
-	while ((s1[i + j]) && (!(is_in_set(s1[i + j], set))))
+	j = i;
+	while (s1[j])
 		j++;
-	str = malloc(sizeof(char) * (j + 1));
-	if (!str)
-		return (0);
-	str[j] = 0;
-	while (j--)
-		str[j] = s1[i + j];
-	return (str);
+	while (j >= i && !(is_in_set(s1[j], set)))
+		j--;
+	return (ft_substr(s1, i, j - i));
 }

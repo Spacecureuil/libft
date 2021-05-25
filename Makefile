@@ -47,7 +47,7 @@ all:	${NAME}
 .PHONY: clean bonus fclean re all
 
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} $(BNS)
 
 fclean:	clean
 		${RM} ${NAME}

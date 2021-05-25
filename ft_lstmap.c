@@ -6,7 +6,7 @@
 /*   By: pmaury <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 16:12:48 by pmaury            #+#    #+#             */
-/*   Updated: 2021/05/25 09:42:31 by pmaury           ###   ########.fr       */
+/*   Updated: 2021/05/25 16:19:25 by pmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_elem;
 
-	if (!f || !del)
-		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
