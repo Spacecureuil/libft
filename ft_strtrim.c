@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = i;
 	while (s1[j])
 		j++;
-	while (j >= i && !(is_in_set(s1[j], set)))
+	while (j >= i && (is_in_set(s1[j], set)))
 		j--;
 	return (ft_substr(s1, i, j - i));
 }
