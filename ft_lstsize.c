@@ -6,13 +6,13 @@
 /*   By: pmaury <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 16:16:47 by pmaury            #+#    #+#             */
-/*   Updated: 2021/04/22 16:17:03 by pmaury           ###   ########.fr       */
+/*   Updated: 2021/05/25 09:43:48 by pmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	size;
 

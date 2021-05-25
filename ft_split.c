@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-static char		*ft_strndup(char *src, int n)
+static char	*ft_strndup(char *src, int n)
 {
 	int		i;
 	char	*str;
@@ -30,7 +30,7 @@ static char		*ft_strndup(char *src, int n)
 	return (str);
 }
 
-static int		count_words(char *str, char charset)
+static int	count_words(char *str, char charset)
 {
 	int	i;
 	int	words;
@@ -51,7 +51,7 @@ static int		count_words(char *str, char charset)
 	return (words);
 }
 
-static int		count_words_len(char *str, char charset)
+static int	count_words_len(char *str, char charset)
 {
 	int	len;
 
@@ -61,8 +61,7 @@ static int		count_words_len(char *str, char charset)
 	return (len);
 }
 
-
-static int		get_word(char *str, char charset, char ***tab, int j)
+static int	get_word(char *str, char charset, char ***tab, int j)
 {
 	int	i;
 
@@ -78,7 +77,7 @@ static int		get_word(char *str, char charset, char ***tab, int j)
 	return (i);
 }
 
-char			**ft_split(char const *str, char charset)
+char		**ft_split(char const *str, char charset)
 {
 	int		i;
 	int		j;
