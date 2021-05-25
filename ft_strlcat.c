@@ -17,15 +17,15 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	size_t	res;
 
 	i = 0;
-	res = 0;
 	j = 0;
 	while (src[i] != '\0')
 		i++;
 	while (j < size && dest[j])
 		j++;
+	if (j == size)
+		return (size + i);
 	if (i < size - j)
 		ft_memcpy(dest + j, src, i + 1);
 	else
