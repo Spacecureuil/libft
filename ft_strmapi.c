@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *src, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
+	if (!src || !f)
+		return (NULL);
 	map = ft_strdup(src);
 	if (!map || !src || !f)
 		return (NULL);
