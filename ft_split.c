@@ -85,7 +85,7 @@ char	**ft_split(char const *str, char charset)
 
 	i = 0;
 	j = 0;
-	if (!str || !charset)
+	if (!str)
 		return (NULL);
 	tab = malloc((count_words((char *)str, charset) + 1) * sizeof(char *));
 	while (tab && str[i])
